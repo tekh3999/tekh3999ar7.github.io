@@ -6,9 +6,41 @@
 <script src="build/ar.js"></script>
 <script>THREEx.ArToolkitContext.baseURL = ''</script>
 
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
-	 /
+<style>
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
+</style>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'> 
+</div>
+
+
+<div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
+
 </div><script>
+
+var camera = document.querySelector("#videoElement");
+ 
+if (navigator.mediaDevices.getUserMedia) {       
+    navigator.mediaDevices.getUserMedia({camera: true})
+  .then(function(stream) {
+    camera.srcObject = stream;
+  })
+  .catch(function(err0r) {
+    console.log("Something went wrong!");
+  });
+}
+
+
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Init
 	//////////////////////////////////////////////////////////////////////////////////
