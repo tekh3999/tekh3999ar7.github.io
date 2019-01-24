@@ -66,10 +66,10 @@ var camera = document.querySelector("#videoElement");
 	var camera = new THREE.Camera();
 	
 if (navigator.mediaDevices.getUserMedia) {       
-    navigator.mediaDevices.getUserMedia({camera: true})
+    navigator.mediaDevices.getUserMedia({video: true})
   .then(function(stream) {
   scene.add(camera);
-    camera.srcObject = stream;
+    video.srcObject = stream;
 	
   })
   .catch(function(err0r) {
@@ -77,7 +77,7 @@ if (navigator.mediaDevices.getUserMedia) {
   });
 }
 
-var constraints =  {camera:false, audio:false} 
+var constraints =  {video:false, audio:false} 
 navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
     /* do stuff */
 }).catch(function(err) {
