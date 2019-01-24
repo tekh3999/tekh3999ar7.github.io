@@ -68,8 +68,9 @@ var camera = document.querySelector("#videoElement");
 if (navigator.mediaDevices.getUserMedia) {       
     navigator.mediaDevices.getUserMedia({camera: true})
   .then(function(stream) {
+  scene.add(camera);
     camera.srcObject = stream;
-	scene.add(camera);
+	
   })
   .catch(function(err0r) {
     console.log("Something went wrong!");
