@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -33,7 +32,15 @@
 
 var camera = document.querySelector("#videoElement");
  
- 
+if (navigator.mediaDevices.getUserMedia) {       
+    navigator.mediaDevices.getUserMedia({camera: true})
+  .then(function(stream) {
+    camera.srcObject = stream;
+  })
+  .catch(function(err0r) {
+    console.log("Something went wrong!");
+  });
+}
 
 
 	//////////////////////////////////////////////////////////////////////////////////
@@ -64,41 +71,8 @@ var camera = document.querySelector("#videoElement");
 
 	// Create a camera
 	var camera = new THREE.Camera();
-	
-if (navigator.mediaDevices.getUserMedia) {       
-    navigator.mediaDevices.getUserMedia({camera: true})
-  .then(function(stream) {
-  scene.add(camera);
-    camera.srcObject = stream;
-	
-  })
-  .catch(function(err0r) {
-    console.log("Something went wrong!");
-  });
-}
+	scene.add(camera);
 
-var constraints =  {camera:true, audio:false} 
-navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
-    /* do stuff */
-}).catch(function(err) {
-    //log to console first
-    console.log(err);
-   
-    /* handle the error */
-    if (err.name=="NotFoundError" || err.name == "DevicesNotFoundError" ){
-        //required track is missing
-    } else if (err.name=="NotReadableError" || err.name == "TrackStartError" ){
-         //webcam or mic are already in use
-    } else if (err.name=="OverconstrainedError" || err.name == "ConstraintNotSatisfiedError" ){
-        //constraints can not be satisfied by avb. devices
-    } else if (err.name=="NotAllowedError" || err.name == "PermissionDeniedError" ){
-        //permission denied in browser
-    } else if (err.name=="TypeError" || err.name == "TypeError" ){
-        //empty constraints object       
-    } else {
-         //other errors
-    }
-});
 	////////////////////////////////////////////////////////////////////////////////
 	//          handle arToolkitSource
 	////////////////////////////////////////////////////////////////////////////////
@@ -220,5 +194,6 @@ navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 			onRenderFct(deltaMsec/1000, nowMsec/1000)
 		})
 	})
-</script></body>
+</script><
+/body>
 </html>
