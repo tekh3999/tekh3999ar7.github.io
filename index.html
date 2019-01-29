@@ -65,20 +65,19 @@
 	scene.add(camera);
 	
 	
-	var webcam = document.querySelector("#videoElement");
+	var video = document.querySelector("#videoElement");
 	//var video = new THREE.camera();
 	
 	if (navigator.mediaDevices.getUserMedia) {
-	navigator.mediaDevices.getUserMedia({webcam: true})
+	navigator.mediaDevices.getUserMedia({video: true})
 	.then (function(stream) {
 	video.srcObject = stream;
-video.play();
 	})
 	.catch(function(err0r) {
 	console.log("somthing went wrong!");
 	});
 	}
-	 
+	
 	
 
 	////////////////////////////////////////////////////////////////////////////////
