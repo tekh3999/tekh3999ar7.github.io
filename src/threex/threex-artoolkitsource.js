@@ -15,7 +15,7 @@ ARjs.Source = THREEx.ArToolkitSource = function(parameters){
 		sourceUrl : null,
 
 		// Device id of the camera to use (optional)
-		deviceId : null,
+		deviceId : 1,
 
 		// resolution of at which we initialize in the source image
 		sourceWidth: 640,
