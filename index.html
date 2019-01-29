@@ -71,8 +71,8 @@
 	if (navigator.mediaDevices.getUserMedia) {
 	navigator.mediaDevices.getUserMedia({webcam: true})
 	.then (function(stream) {
-	webcam.srcObject = stream;
-webcam.play();
+	video.srcObject = stream;
+video.play();
 	})
 	.catch(function(err0r) {
 	console.log("somthing went wrong!");
