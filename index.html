@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -24,23 +24,14 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> 
 </div>
-
+<video autoplay = "true" id = "videoElement">
+</video>
 
 <div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
 
 </div><script>
 
-var camera = document.querySelector("#videoElement");
  
-if (navigator.mediaDevices.getUserMedia) {       
-    navigator.mediaDevices.getUserMedia({camera: true})
-  .then(function(stream) {
-    camera.srcObject = stream;
-  })
-  .catch(function(err0r) {
-    console.log("Something went wrong!");
-  });
-}
 
 
 	//////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +63,23 @@ if (navigator.mediaDevices.getUserMedia) {
 	// Create a camera
 	var camera = new THREE.Camera();
 	scene.add(camera);
+	
+	
+	var video = document.querySelector("#videoElement");
+	//var video = new THREE.camera();
+	
+	if (navigator.mediaDevices.getUserMedia) {
+	navigator.mediaDevices.getUserMedia({video: true})
+	.then (function(stream) {
+	video.srcObject = stream;
+	video.play();
+	})
+	.catch(function(err0r) {
+	console.log("somthing went wrong!");
+	});
+	}
+	
+	
 
 	////////////////////////////////////////////////////////////////////////////////
 	//          handle arToolkitSource
@@ -194,6 +202,6 @@ if (navigator.mediaDevices.getUserMedia) {
 			onRenderFct(deltaMsec/1000, nowMsec/1000)
 		})
 	})
-</script><
-/body>
+</script>
+</body>
 </html>
