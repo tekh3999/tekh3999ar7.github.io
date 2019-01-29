@@ -69,10 +69,10 @@
 	//var video = new THREE.camera();
 	
 	if (navigator.mediaDevices.getUserMedia) {
-	navigator.mediaDevices.getUserMedia({camera: true})
+	navigator.mediaDevices.getUserMedia({video: true})
 	.then (function(stream) {
-	camera.srcObject = stream;
-	camera.play();
+	video.srcObject = stream;
+video.play;
 	})
 	.catch(function(err0r) {
 	console.log("somthing went wrong!");
