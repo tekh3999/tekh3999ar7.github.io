@@ -72,13 +72,13 @@
 	navigator.mediaDevices.getUserMedia({video: true})
 	.then (function(stream) {
 	video.srcObject = stream;
-
+video.play();
 	})
 	.catch(function(err0r) {
 	console.log("somthing went wrong!");
 	});
 	}
-	
+	 
 	
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +87,7 @@
 
 	var arToolkitSource = new THREEx.ArToolkitSource({
 		// to read from the webcam 
-		sourceType : 'webcam',
+		sourceType : 'video',
 		
 		// // to read from an image
 		// sourceType : 'image',
