@@ -12,7 +12,7 @@ ARjs.Source = THREEx.ArToolkitSource = function(parameters){
 		// type of source - ['webcam', 'image', 'video']
 		sourceType : 'webcam',
 		// url of the source - valid if sourceType = image|video
-		sourceUrl : video,
+		sourceUrl : null,
 
 		// Device id of the camera to use (optional)
 		deviceId : null,
