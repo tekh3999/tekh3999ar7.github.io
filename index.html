@@ -65,14 +65,14 @@
 	scene.add(camera);
 	
 	
-	var video = document.querySelector("#videoElement");
+	var webcam = document.querySelector("#videoElement");
 	//var video = new THREE.camera();
 	
 	if (navigator.mediaDevices.getUserMedia) {
-	navigator.mediaDevices.getUserMedia({video: true})
+	navigator.mediaDevices.getUserMedia({webcam: true})
 	.then (function(stream) {
-	video.srcObject = stream;
-video.play();
+	webcam.srcObject = stream;
+webcam.play();
 	})
 	.catch(function(err0r) {
 	console.log("somthing went wrong!");
@@ -87,7 +87,7 @@ video.play();
 
 	var arToolkitSource = new THREEx.ArToolkitSource({
 		// to read from the webcam 
-		sourceType : 'video',
+		sourceType : 'webcam',
 		
 		// // to read from an image
 		// sourceType : 'image',
