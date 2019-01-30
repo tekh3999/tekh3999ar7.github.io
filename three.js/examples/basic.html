@@ -1,39 +1,16 @@
- <!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
+<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <!-- three.js library -->
 <script src='vendor/three.js/build/three.min.js'></script>
 <!-- ar.js -->
-<script src="build/ar.js"></script>
-<script>THREEx.ArToolkitContext.baseURL = ''</script>
+<script src="../build/ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
-<style>
-#container {
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
-}
-#videoElement {
-    width: 500px;
-    height: 375px;
-    background-color: #666;
-}
-</style>
-
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'> 
-<!--</div>
-<video autoplay = "true" id = "videoElement">
-</video>-->
-
-<div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
-
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - three.js camera transform
+	<br/>
+	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 </div><script>
-
- 
-
-
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Init
 	//////////////////////////////////////////////////////////////////////////////////
@@ -63,23 +40,6 @@
 	// Create a camera
 	var camera = new THREE.Camera();
 	scene.add(camera);
-	
-	
-	var video = document.querySelector("#videoElement");
-	//var video = new THREE.camera();
-	
-	if (navigator.mediaDevices.getUserMedia) {
-	navigator.mediaDevices.getUserMedia({camera: true})
-	.then (function(stream) {
-	camera.srcObject = stream;
-	camera.play();
-	})
-	.catch(function(err0r) {
-	console.log("somthing went wrong!");
-	});
-	}
-	
-	
 
 	////////////////////////////////////////////////////////////////////////////////
 	//          handle arToolkitSource
@@ -120,7 +80,7 @@
 
 	// create atToolkitContext
 	var arToolkitContext = new THREEx.ArToolkitContext({
-		cameraParametersUrl: THREEx.ArToolkitContext.baseURL + 'data/data/camera_para.dat',
+		cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '../data/data/camera_para.dat',
 		detectionMode: 'mono',
 	})
 	// initialize it
@@ -146,7 +106,7 @@
 	// init controls for camera
 	var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
 		type : 'pattern',
-		patternUrl : THREEx.ArToolkitContext.baseURL + 'data/data/patt.hiro',
+		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
 		// patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
 		// as we controls the camera, set changeMatrixMode: 'cameraTransformMatrix'
 		changeMatrixMode: 'cameraTransformMatrix'
@@ -202,6 +162,4 @@
 			onRenderFct(deltaMsec/1000, nowMsec/1000)
 		})
 	})
-</script>
-</body>
-</html>
+</script></body>
