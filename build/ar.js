@@ -5378,7 +5378,7 @@ ARjs.Context.prototype._initArtoolkit = function(onCompleted){
                 _this.arController = arController
 
 		// honor this.parameters.imageSmoothingEnabled
-		arController.ctx.mozImageSmoothingEnabled = _this.parameters.imageSmoothingEnabled;
+		arController.ctx.imageSmoothingEnabled = _this.parameters.imageSmoothingEnabled;
 		arController.ctx.webkitImageSmoothingEnabled = _this.parameters.imageSmoothingEnabled;
 		arController.ctx.msImageSmoothingEnabled = _this.parameters.imageSmoothingEnabled;
 		arController.ctx.imageSmoothingEnabled = _this.parameters.imageSmoothingEnabled;

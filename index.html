@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" container="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <!-- three.js library -->
 <script src='vendor/three.js/build/three.min.js'></script>
 <!-- ar.js -->
@@ -15,19 +15,40 @@
     height: 375px;
     border: 10px #333 solid;
 }
-#videoElement {
+#click{
     width: 500px;
     height: 375px;
     background-color: #666;
 }
+
+#btn {
+    position: absolute;
+    display: block;
+    z-index: 99;
+    left: 5%;
+    top: 50%;
+	width: 100px;
+    height: 50px;
+	background-color: #0020FF
+	
+    }
+	
+	 .a1{
+	 color:white;
+	 }
+	
+ 
 </style>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> 
-<!--</div>
-<video autoplay = "true" id = "videoElement">
+</div>
+<!--<video autoplay = "true" id = "videoElement">
 </video>-->
-
+ 
+<button id='btn' onclick=''><p><a class="a1">Android: play</a><p/></button>
 <div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
+
+
 
 </div><script>
 
@@ -65,21 +86,10 @@
 	scene.add(camera);
 	
 	
-	var video = document.querySelector("#videoElement");
-	//var video = new THREE.camera();
+	 
+	 
 	
-	if (navigator.mediaDevices.getUserMedia) {
-	navigator.mediaDevices.getUserMedia({camera: true})
-	.then (function(stream) {
-	camera.srcObject = stream;
-	camera.play();
-	})
-	.catch(function(err0r) {
-	console.log("somthing went wrong!");
-	});
-	}
-	
-	
+	 
 
 	////////////////////////////////////////////////////////////////////////////////
 	//          handle arToolkitSource
