@@ -143,7 +143,7 @@ ARjs.Source.prototype._initSourceVideo = function(onReady) {
 		if (!domElement.videoWidth)	return;
 		onReady()
 		clearInterval(interval)
-	}, 1000/200);
+	}, 5000/50);
 	return domElement
 }
 
