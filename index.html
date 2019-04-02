@@ -191,21 +191,21 @@
 	///////////////////////////////////////////////
 	//			Add Lights						 //
 	//////////////////////////////////////////////
-	 var lightdi = new THREE.DirectionalLight( 0xffddcc, 10 )
-	 lightdi.position.set( 0, 50, 0 );
+	 var lightdi = new THREE.DirectionalLight( 0xffddcc, 13 )
+	 lightdi.position.set( 0, 100, 0 );
 			scene.add( lightdi );
-		var lightamb = new THREE.AmbientLight(  0x000000, 8 );
+		var lightamb = new THREE.AmbientLight(  0x000000, 10 );
 			 lightamb.position.set( 0, 50, 0 );
 			scene.add( lightamb );
 			
-				//hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 55 );
+				//hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 5 );
 				//hemiLight.color.setHSL( 0.6, 1, 0.6 );
 				//hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
-				//hemiLight.position.set( 0, 50, 0 );
+				////hemiLight.position.set( 0, 50, 0 );
 				//scene.add( hemiLight );
 
-				//hemiLightHelper = new THREE.HemisphereLightHelper( hemiLight, 10 );
-				//scene.add( hemiLightHelper );
+			//hemiLightHelper = new THREE.HemisphereLightHelper( hemiLight, 10 );
+			//scene.add( hemiLightHelper );
 		 
 	/////////////////////////////////////////////////////
 	//     add json object                             //
@@ -222,6 +222,7 @@
 				//loader.load( 'obj/books/bandmd.js', function( geometry ) {
 				//loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
 				loader.load( 'obj/models/Helmet_base-model.js', function( geometry ) {
+				//loader.load( 'obj/models/building_model.js', function( geometry ) {
 
 
 				var material = new THREE.MeshPhongMaterial( {
@@ -236,6 +237,7 @@
 					
 					//Helmet
 					map: textureLoader.load('Images/Texans-logoUV.jpg'),
+					
 					//map: textureLoader.load('Images/diffuse_Image_1_AtlasUVs.jpg'),
                     //ambientMap: textureLoader.load('obj/books/ambient_Image_1_AtlasUVs.jpg'),
 //specularMap: textureLoader.load(  'obj/models/Helmet_base-model.js' ),
@@ -255,13 +257,10 @@
 								color: 0x996633,
 								  envMap: scCube,
 								specular: 0x050505,
-    
-
-					shininess: 100
+				shininess: 65
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );
-				
 				scene.add( mesh );
 				mesh.scale.set( 0.8, 0.8, 0.8 );
 					// Setsup mesh rotation animation.
@@ -295,7 +294,7 @@ rotateObject(mesh, -90,0,0);
 		function drawSimpleSkybox() {
         // define path and box sides images
         var path = 'textures/';
-        var sides = [ path + 'sbox_px.jpg', path + 'sbox_nx.jpg', path + 'sbox_py.jpg', path + 'sbox_ny.jpg', path + 'sbox_pz.jpg', path + 'sbox_nz.jpg' ];
+        var sides = [ path + 'sbox_px.jpg', path + 'sbox_nx.jpg', path + 'sbox_py.jpg', path + 'sbox_py.jpg', path + 'sbox_pz.jpg', path + 'sbox_nz.jpg' ];
 
         // load images
         scCube = THREE.ImageUtils.loadTextureCube(sides);
@@ -315,7 +314,7 @@ rotateObject(mesh, -90,0,0);
 
         skyBox.UserData = {name:"skyBox"};
 
-      // scene.add(skyBox);
+     // scene.add(skyBox);
 		
     }
 	
