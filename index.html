@@ -189,13 +189,16 @@
 	///////////////////////////////////////////////
 	//			Add Lights						 //
 	//////////////////////////////////////////////
-	var light = new THREE.DirectionalLight( 0xccccff, 1 );
-			light.position.set( -1, 0.75, -0.5 );
+	 var light = new THREE.DirectionalLight( 0xccccff, 5 );
+	 
+			light.position.set( -50, 0.75, -0.5 );
 			scene.add( light );
 			
-			var light = new THREE.DirectionalLight( 0xffddcc, 1 );
-			light.position.set( 1, 0.75, 0.5 );
+			//ar light = new THREE.DirectionalLight( 0xffddcc, 1 );
+			 var light = new THREE.AmbientLight(  0xccccff,  5 );
+			light.position.set( 50, 0.75, 0.5 );
 			scene.add( light );
+		 
 	/////////////////////////////////////////////////////
 	//     add json object                             //
 	/////////////////////////////////////////////////////
@@ -209,26 +212,41 @@
 			//loader.load('obj/myfemale4/genesisfemale-5.js', function (geometry) {
 			    //loader.load( 'obj/books/tpomA.js', function( geometry ) {
 				//loader.load( 'obj/books/bandmd.js', function( geometry ) {
-				loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
+				//loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
+				loader.load( 'obj/models/Helmet_base-model.js', function( geometry ) {
 
 
 				var material = new THREE.MeshPhongMaterial( {
-				    specular: 0x211111,
-transparent : true,
-		opacity: 0.9,
+				   
+//transparent : true,
+		//opacity: 0.9,
 		 
 							//book
 				   // map: textureLoader.load('obj/books/diffuse_Image_1_AtlasUVs.jpg'),
                     //ambientMap: textureLoader.load('obj/books/ambient_Image_1_AtlasUVs.jpg'),
 					
 					
+					//Helmet
+					map: textureLoader.load('Images/Texans-logoUV.jpg'),
+					//map: textureLoader.load('Images/diffuse_Image_1_AtlasUVs.jpg'),
+                    //ambientMap: textureLoader.load('obj/books/ambient_Image_1_AtlasUVs.jpg'),
+//specularMap: textureLoader.load(  'obj/models/Helmet_base-model.js' ),
 					//female
 					//map: textureLoader.load( 'obj/myfemale4/diffuse_Image_1_genesis5.jpg' ),
 					//specularMap: textureLoader.load( 'obj/myfemale4/specular_Image_1_genesis5.jpg' ),
 					//opacityMap: textureLoader.load( 'obj/myfemale4/opacity_Image_1_genesis5.jpg' ),
+  
+  //envMap: mirrorCamera.renderTarget,
+ //color: color,
+   specular: 0x111111,
+   
+    side: THREE.DoubleSide,
+                                emissive: 0x011111,
+								//map: map,			add if you want to use texture map
+                                envMap: scCube,
+   metal: false,
 
-
-					shininess: 0
+					shininess: 100
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );
@@ -244,11 +262,60 @@ transparent : true,
 }
 //to sit standing up
 //rotateObject(mesh, -90,-90,-90);
-rotateObject(mesh, 0,0,0);
+rotateObject(mesh, -90,0,0);
 
 
 			} );
 
+		}
+		
+		
+		////////////////////////////
+		//			Skybox		  //
+		///////////////////////////
+		var sphere, cube;
+	 var scCube;
+    var selectableObjs = [];
+    var width = window.innerWidth, height = window.innerHeight;
+	 //Add other scene elements
+        drawSimpleSkybox();
+       drawShapes();
+		
+		function drawSimpleSkybox() {
+        // define path and box sides images
+        var path = 'textures/';
+        var sides = [ path + 'sbox_px.jpg', path + 'sbox_nx.jpg', path + 'sbox_py.jpg', path + 'sbox_ny.jpg', path + 'sbox_pz.jpg', path + 'sbox_nz.jpg' ];
+
+        // load images
+        scCube = THREE.ImageUtils.loadTextureCube(sides);
+        scCube.format = THREE.RGBFormat;
+
+        // prepare skybox material (shader)
+        var skyShader = THREE.ShaderLib["cube"];
+        skyShader.uniforms["tCube"].value = scCube;
+        var skyMaterial = new THREE.ShaderMaterial( {
+            fragmentShader: skyShader.fragmentShader, vertexShader: skyShader.vertexShader,
+            uniforms: skyShader.uniforms, depthWrite: false, side: THREE.BackSide
+        });
+
+        // create Mesh with cube geometry and add to the scene
+        var skyBox = new THREE.Mesh(new THREE.BoxGeometry(500, 500, 500), skyMaterial);
+        skyMaterial.needsUpdate = true;
+
+        skyBox.UserData = {name:"skyBox"};
+
+      // scene.add(skyBox);
+		
+    }
+	
+	   function drawShapes() {
+
+        var manager = new THREE.LoadingManager();
+        manager.onProgress = function ( item, loaded, total ) {
+
+            console.log( item, loaded, total );
+
+        };
 		}
 
 	//////////////////////////////////////////////////////////////////////////////////
