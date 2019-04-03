@@ -319,18 +319,18 @@ rotateObject3(mesh3, -90,0,0);
 /////////////////////////////
 		//	Helmet bolts //
 		/////////////////////////////
-		loadMymodebolts();
-	function loadMymodebolts( callback ) {
+		loadMymodelbolts();
+	function loadMymodelbolts( callback ) {
 		var loader4 = new THREE.JSONLoader();
-		loader4.load( 'obj/models/Helmet_base-mode-bolts.js', function( geometry ) {
+		loader4.load( 'obj/models/Helmet_base-model-bolts.js', function( geometry ) {
 		 var material = new THREE.MeshPhongMaterial( {
 				    side: THREE.DoubleSide,
                                 //emissive: 0x154360,
 								//map: map,			add if you want to use texture map
-                              color: 0x996633,
-								  //envMap: scCube,
-								specular: 0x050505,
-				shininess: 3
+                              color: 0x000000,
+								  envMap: scCube,
+								specular: 0xac0c0c0,
+				shininess: 50
 				} );
 
 				mesh4 = new THREE.Mesh( geometry, material );
