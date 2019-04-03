@@ -191,10 +191,10 @@
 	///////////////////////////////////////////////
 	//			Add Lights						 //
 	//////////////////////////////////////////////
-	 var lightdi = new THREE.DirectionalLight( 0xffddcc, 13 )
+	 var lightdi = new THREE.DirectionalLight( 0xffddcc, 10 )
 	 lightdi.position.set( 0, 100, 0 );
 			scene.add( lightdi );
-		var lightamb = new THREE.AmbientLight(  0x000000, 10 );
+		var lightamb = new THREE.AmbientLight(  0x000000, 28 );
 			 lightamb.position.set( 0, 50, 0 );
 			scene.add( lightamb );
 			
@@ -215,49 +215,23 @@
 	function loadMymodel( callback ) {
 
 			var loader = new THREE.JSONLoader();
-
-
 			//loader.load('obj/myfemale4/genesisfemale-5.js', function (geometry) {
 			    //loader.load( 'obj/books/tpomA.js', function( geometry ) {
 				//loader.load( 'obj/books/bandmd.js', function( geometry ) {
 				//loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
+			 
 				loader.load( 'obj/models/Helmet_base-model.js', function( geometry ) {
-				//loader.load( 'obj/models/building_model.js', function( geometry ) {
-
-
-				var material = new THREE.MeshPhongMaterial( {
-				   
-//transparent : true,
-		//opacity: 0.9,
-		 
-							//book
-				   // map: textureLoader.load('obj/books/diffuse_Image_1_AtlasUVs.jpg'),
-                    //ambientMap: textureLoader.load('obj/books/ambient_Image_1_AtlasUVs.jpg'),
-					
-					
-					//Helmet
-					map: textureLoader.load('Images/Texans-logoUV.jpg'),
-					
-					//map: textureLoader.load('Images/diffuse_Image_1_AtlasUVs.jpg'),
-                    //ambientMap: textureLoader.load('obj/books/ambient_Image_1_AtlasUVs.jpg'),
-//specularMap: textureLoader.load(  'obj/models/Helmet_base-model.js' ),
-					//female
-					//map: textureLoader.load( 'obj/myfemale4/diffuse_Image_1_genesis5.jpg' ),
-					//specularMap: textureLoader.load( 'obj/myfemale4/specular_Image_1_genesis5.jpg' ),
-					//opacityMap: textureLoader.load( 'obj/myfemale4/opacity_Image_1_genesis5.jpg' ),
-  
-  //envMap: mirrorCamera.renderTarget,
- //color: color,
-   
-   
-    side: THREE.DoubleSide,
-                                //emissive: 0x154360,
+				 
+			//loader.load( 'obj/models/building_model.js', function( geometry ) {
+				 var material = new THREE.MeshPhongMaterial( {
+				   map: textureLoader.load('Images/Texans-logoUV.jpg'),
+				side: THREE.DoubleSide,
+                                emissive: 0x154360,
 								//map: map,			add if you want to use texture map
-                               
-								color: 0x996633,
+                              color: 0x996633,
 								  envMap: scCube,
 								specular: 0x050505,
-				shininess: 65
+				shininess: 175
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );
@@ -269,16 +243,111 @@
 			object.rotateX(THREE.Math.degToRad(degreeX));
 			object.rotateY(THREE.Math.degToRad(degreeY));
 			object.rotateZ(THREE.Math.degToRad(degreeZ));
+			}
+		//to sit standing up
+			//rotateObject(mesh, -90,-90,-90);
+		rotateObject(mesh, -90,0,0);
+		} );
+		}
+		
+		/////////////////////////////
+		//	Helmet Strap and bolts //
+		/////////////////////////////
+		loadMymodelII();
+	function loadMymodelII( callback ) {
+		var loader2 = new THREE.JSONLoader();
+		loader2.load( 'obj/models/Helmet_base-mode-facemask.js', function( geometry ) {
+		 var material = new THREE.MeshPhongMaterial( {
+				    side: THREE.DoubleSide,
+                                //emissive: 0x154360,
+								//map: map,			add if you want to use texture map
+                              color: 0x996633,
+								  //envMap: scCube,
+								specular: 0x050505,
+				shininess: 3
+				} );
+
+				mesh2 = new THREE.Mesh( geometry, material );
+				scene.add( mesh2 );
+				mesh2.scale.set( 0.8, 0.8, 0.8 );
+					// Setsup mesh rotation animation.
+	  function rotateObject2(object, degreeX=0, degreeY= 0, degreeZ=0){
+			
+			object.rotateX(THREE.Math.degToRad(degreeX));
+			object.rotateY(THREE.Math.degToRad(degreeY));
+			object.rotateZ(THREE.Math.degToRad(degreeZ));
 }
 //to sit standing up
 //rotateObject(mesh, -90,-90,-90);
-rotateObject(mesh, -90,0,0);
-
-
-			} );
-
-		}
+rotateObject2(mesh2, -90,0,0);
+} );
+}
 		
+		/////////////////////////////
+		//	Helmet facemask-front //
+		/////////////////////////////
+		loadMymodeface();
+	function loadMymodeface( callback ) {
+		var loader3 = new THREE.JSONLoader();
+		loader3.load( 'obj/models/Helmet_base-mode-facemaskfront.js', function( geometry ) {
+		 var material = new THREE.MeshPhongMaterial( {
+				    side: THREE.DoubleSide,
+                                //emissive: 0x154360,
+								//map: map,			add if you want to use texture map
+                              color: 0x000000,
+								  envMap: scCube,
+								specular: 0x050505,
+				shininess: 95
+				} );
+
+				mesh3 = new THREE.Mesh( geometry, material );
+				scene.add( mesh3 );
+				mesh3.scale.set( 0.8, 0.8, 0.8 );
+					// Sets up mesh rotation animation.
+	  function rotateObject3(object, degreeX=0, degreeY= 0, degreeZ=0){
+			
+			object.rotateX(THREE.Math.degToRad(degreeX));
+			object.rotateY(THREE.Math.degToRad(degreeY));
+			object.rotateZ(THREE.Math.degToRad(degreeZ));
+}
+//to sit standing up
+//rotateObject(mesh, -90,-90,-90);
+rotateObject3(mesh3, -90,0,0);
+} );
+}
+
+/////////////////////////////
+		//	Helmet bolts //
+		/////////////////////////////
+		loadMymodebolts();
+	function loadMymodebolts( callback ) {
+		var loader4 = new THREE.JSONLoader();
+		loader4.load( 'obj/models/Helmet_base-mode-bolts.js', function( geometry ) {
+		 var material = new THREE.MeshPhongMaterial( {
+				    side: THREE.DoubleSide,
+                                //emissive: 0x154360,
+								//map: map,			add if you want to use texture map
+                              color: 0x996633,
+								  //envMap: scCube,
+								specular: 0x050505,
+				shininess: 3
+				} );
+
+				mesh4 = new THREE.Mesh( geometry, material );
+				scene.add( mesh4 );
+				mesh4.scale.set( 0.8, 0.8, 0.8 );
+					// Setsup mesh rotation animation.
+	  function rotateObject4(object, degreeX=0, degreeY= 0, degreeZ=0){
+			
+			object.rotateX(THREE.Math.degToRad(degreeX));
+			object.rotateY(THREE.Math.degToRad(degreeY));
+			object.rotateZ(THREE.Math.degToRad(degreeZ));
+}
+//to sit standing up
+//rotateObject(mesh, -90,-90,-90);
+rotateObject4(mesh4, -90,0,0);
+} );
+}
 		
 		////////////////////////////
 		//			Skybox		  //
@@ -337,6 +406,9 @@ rotateObject(mesh, -90,0,0);
 		renderer.render( scene, camera );
 		
 		mesh.rotation.y = mesh.rotation.y + 0.01;
+		mesh2.rotation.y = mesh.rotation.y + 0.01;
+		mesh3.rotation.y = mesh.rotation.y + 0.01
+		mesh4.rotation.y = mesh.rotation.y + 0.01;
 	})
 
 	// run the rendering loop
