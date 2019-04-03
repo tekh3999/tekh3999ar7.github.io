@@ -36,7 +36,7 @@
     display: block;
     z-index: 99;
     left: 0%;
-    top: 0%;
+    top: 95%;
 	width: 30px;
     height: 30px;
 	background-color: #0020FF
@@ -66,7 +66,7 @@
 
  	var camera, tick = 0,
 			scene, renderer, clock = new THREE.Clock(),
-			controls, container, gui = new dat.GUI( { width: 350 } ),
+			controls, container, gui = new dat.GUI( { width: 100 } ),
 			options, spawnerOptions, particleSystem;
 
 				
@@ -419,19 +419,19 @@ rotateObject4(mesh4, -90,0,0);
 
 			options = {
 				position: new THREE.Vector3(),
-				positionRandomness: 1.83,
+				positionRandomness: 0.3,
 				velocity: new THREE.Vector3(),
-				velocityRandomness: 0.31,
+				velocityRandomness: 0.5,
 				color: 0xaa88ff,
-				colorRandomness: 0.63,
+				colorRandomness: 0.2,
 				turbulence: 0,
 				lifetime: 2,
-				size: 16.3,
-				sizeRandomness: 17.1
+				size: 5,
+				sizeRandomness: 1
 			};
 
 			spawnerOptions = {
-				spawnRate: 23718,
+				spawnRate: 15000,
 				horizontalSpeed: 1.5,
 				verticalSpeed: 1.33,
 				timeScale: 1
@@ -447,7 +447,7 @@ rotateObject4(mesh4, -90,0,0);
 			gui.add( options, "lifetime", .1, 10 );
 			gui.add( options, "turbulence", 0, 1 );
 
-			gui.add( spawnerOptions, "spawnRate", 10, 30000 );
+			gui.add( spawnerOptions, "spawnRate", 10, 15000 );
 			gui.add( spawnerOptions, "timeScale", -1, 1 );
 
 			//
@@ -520,9 +520,9 @@ rotateObject4(mesh4, -90,0,0);
 		mesh2.rotation.y = mesh.rotation.y - 0.01;
 		mesh3.rotation.y = mesh.rotation.y - 0.01
 		mesh4.rotation.y = mesh.rotation.y - 0.01;
-		 animate();
+		 
 			particleSystem.update( tick );
- 
+ animate();
 			render();
 			
 			stats.update();
