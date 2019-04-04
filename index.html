@@ -226,18 +226,18 @@ if (navigator.mediaDevices.getUserMedia) {
 			//loader.load('obj/myfemale4/genesisfemale-5.js', function (geometry) {
 			    //loader.load( 'obj/books/tpomA.js', function( geometry ) {
 				 
-				//loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
+				loader.load( 'obj/models/spaceshuttle.js', function( geometry ) {
 			 
-				loader.load( 'obj/models/Helmet_base-model.js', function( geometry ) {
+				//loader.load( 'obj/models/Helmet_base-model.js', function( geometry ) {
 				 
 			//loader.load( 'obj/models/building_model.js', function( geometry ) {
 				 var material = new THREE.MeshPhongMaterial( {
-				   map: textureLoader.load('Images/Texans-logoUV.jpg'),
+				  // map: textureLoader.load('Images/Texans-logoUV.jpg'),
 				side: THREE.DoubleSide,
                                 emissive: 0x154360,
 								//map: map,			add if you want to use texture map
                               color: 0x996633,
-								  envMap: scCube,
+								 // envMap: scCube,
 								specular: 0x050505,
 				shininess: 175
 				} );
@@ -276,7 +276,7 @@ if (navigator.mediaDevices.getUserMedia) {
 				} );
  
 				mesh2 = new THREE.Mesh( geometry, material );
-				scene.add( mesh2 );
+				//scene.add( mesh2 );
 				mesh2.scale.set( 0.8, 0.8, 0.8 );
 					// Setsup mesh rotation animation.
 	  function rotateObject2(object, degreeX=0, degreeY= 0, degreeZ=0){
@@ -309,7 +309,7 @@ rotateObject2(mesh2, -90,0,0);
 				} );
 
 				mesh3 = new THREE.Mesh( geometry, material );
-				scene.add( mesh3 );
+				//scene.add( mesh3 );
 				mesh3.scale.set( 0.8, 0.8, 0.8 );
 					// Sets up mesh rotation animation.
 	  function rotateObject3(object, degreeX=0, degreeY= 0, degreeZ=0){
@@ -342,7 +342,7 @@ rotateObject3(mesh3, -90,0,0);
 				} );
 
 				mesh4 = new THREE.Mesh( geometry, material );
-				scene.add( mesh4 );
+				//scene.add( mesh4 );
 				mesh4.scale.set( 0.8, 0.8, 0.8 );
 					// Setsup mesh rotation animation.
 	  function rotateObject4(object, degreeX=0, degreeY= 0, degreeZ=0){
@@ -410,10 +410,10 @@ rotateObject4(mesh4, -90,0,0);
 		
 		
 		 	particleSystem = new THREE.GPUParticleSystem( {
-				maxParticles: 250000
+				maxParticles: 7500
 			} );
 
-			scene.add( particleSystem );
+			//scene.add( particleSystem );
 
 			// options passed during each spawned
 
