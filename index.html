@@ -35,8 +35,13 @@
     position: absolute;
     display: block;
     z-index: 99;
+
     left: 2%;
     top: 94%;
+
+    left: 0%;
+    top: 95%;
+
 	width: 30px;
     height: 30px;
 	background-color: #0020FF
@@ -52,8 +57,14 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> 
 
+
 </div>
 <div id="container"></div>
+
+--<div id="container" ></div>
+</div>
+
+
 <!--<video autoplay = "true" id = "video">
 </video>-->
  
@@ -82,8 +93,8 @@
 		antialias: true,
 		alpha: true
 	});
-//renderer.setClearColor(new THREE.Color('lightgrey'), 0)
-	renderer.setSize( 1024, 1024 );
+ //renderer.setClearColor(new THREE.Color('lightgrey'), 0)
+	renderer.setSize( 1024, 768 );
 	renderer.domElement.style.position = 'absolute'
 	renderer.domElement.style.top = '0px'
 	renderer.domElement.style.left = '0px'
@@ -198,11 +209,20 @@ if (navigator.mediaDevices.getUserMedia) {
 	
 	///////////////////////////////////////////////
 	//			Add Lights						 //
-	//////////////////////////////////////////////
-	 var lightdi = new THREE.DirectionalLight( 0xffddcc, 10 )
+	///////////////////////////////////////////////
+	// var lightdi = new THREE.DirectionalLight( 0xffddcc, 10)
+	 //lightdi.position.set( 0, 100, 0 );
+			//scene.add( lightdi );
+		//var lightamb = new THREE.AmbientLight(  0x000000, 25 );
+			// lightamb.position.set( 0, 50, 0 );
+			//scene.add( lightamb );
+			
+			
+			//base model lighting setup
+			 var lightdi = new THREE.DirectionalLight( 0xffddcc, 2 )
 	 lightdi.position.set( 0, 100, 0 );
 			scene.add( lightdi );
-		var lightamb = new THREE.AmbientLight(  0x000000, 28 );
+		var lightamb = new THREE.AmbientLight(  0x000000, 0.5 );
 			 lightamb.position.set( 0, 50, 0 );
 			scene.add( lightamb );
 			
@@ -258,59 +278,30 @@ if (navigator.mediaDevices.getUserMedia) {
 		} );
 		}
 		
-		/////////////////////////////
-		//	Helmet Strap and bolts //
-		/////////////////////////////
-		loadMymodelII();
-	function loadMymodelII( callback ) {
-		var loader2 = new THREE.JSONLoader();
-		loader2.load( 'obj/models/Helmet_base-mode-facemask.js', function( geometry ) {
-		 var material = new THREE.MeshPhongMaterial( {
-				    side: THREE.DoubleSide,
-                                //emissive: 0x154360,
-								//map: map,			add if you want to use texture map
-                              color: 0x996633,
-								  //envMap: scCube,
-								specular: 0x050505,
-				shininess: 3
-				} );
- 
-				mesh2 = new THREE.Mesh( geometry, material );
-				//scene.add( mesh2 );
-				mesh2.scale.set( 0.8, 0.8, 0.8 );
-					// Setsup mesh rotation animation.
-	  function rotateObject2(object, degreeX=0, degreeY= 0, degreeZ=0){
-			
-			object.rotateX(THREE.Math.degToRad(degreeX));
-			object.rotateY(THREE.Math.degToRad(degreeY));
-			object.rotateZ(THREE.Math.degToRad(degreeZ));
-}
-//to sit standing up
-//rotateObject(mesh, -90,-90,-90);
-rotateObject2(mesh2, -90,0,0);
-} );
-}
-		
-		/////////////////////////////
-		//	Helmet facemask-front //
+	 
+
+	    /////////////////////////////
+		//	World                   //
 		/////////////////////////////
 		loadMymodeface();
 	function loadMymodeface( callback ) {
 		var loader3 = new THREE.JSONLoader();
-		loader3.load( 'obj/models/Helmet_base-mode-facemaskfront.js', function( geometry ) {
+		loader3.load( 'obj/models/world.js', function( geometry ) {
 		 var material = new THREE.MeshPhongMaterial( {
 				    side: THREE.DoubleSide,
                                 //emissive: 0x154360,
-								//map: map,			add if you want to use texture map
-                              color: 0x000000,
-								  envMap: scCube,
+								map: textureLoader.load('Images/earth-day.jpg'),
+                              //color: 0x000000,
+								  //envMap: scCube,
 								specular: 0x050505,
 				shininess: 95
 				} );
 
-				mesh3 = new THREE.Mesh( geometry, material );
-				//scene.add( mesh3 );
-				mesh3.scale.set( 0.8, 0.8, 0.8 );
+				mesh2 = new THREE.Mesh( geometry, material );
+				scene.add( mesh2 ); 
+				mesh2.scale.set( 0.2, 0.2, 0.2 );
+				
+				mesh2.position.set(2, -5, 0);
 					// Sets up mesh rotation animation.
 	  function rotateObject3(object, degreeX=0, degreeY= 0, degreeZ=0){
 			
@@ -319,43 +310,10 @@ rotateObject2(mesh2, -90,0,0);
 			object.rotateZ(THREE.Math.degToRad(degreeZ));
 }
 //to sit standing up
-//rotateObject(mesh, -90,-90,-90);
-rotateObject3(mesh3, -90,0,0);
+// rotateObject3(mesh, -90,0,0);
 } );
 }
 
-/////////////////////////////
-		//	Helmet bolts //
-		/////////////////////////////
-		loadMymodelbolts();
-	function loadMymodelbolts( callback ) {
-		var loader4 = new THREE.JSONLoader();
-		loader4.load( 'obj/models/Helmet_base-model-bolts.js', function( geometry ) {
-		 var material = new THREE.MeshPhongMaterial( {
-				    side: THREE.DoubleSide,
-                                //emissive: 0x154360,
-								//map: map,			add if you want to use texture map
-                              color: 0x000000,
-								  envMap: scCube,
-								specular: 0xac0c0c0,
-				shininess: 50
-				} );
-
-				mesh4 = new THREE.Mesh( geometry, material );
-				//scene.add( mesh4 );
-				mesh4.scale.set( 0.8, 0.8, 0.8 );
-					// Setsup mesh rotation animation.
-	  function rotateObject4(object, degreeX=0, degreeY= 0, degreeZ=0){
-			
-			object.rotateX(THREE.Math.degToRad(degreeX));
-			object.rotateY(THREE.Math.degToRad(degreeY));
-			object.rotateZ(THREE.Math.degToRad(degreeZ));
-}
-//to sit standing up
-//rotateObject(mesh, -90,-90,-90);
-rotateObject4(mesh4, -90,0,0);
-} );
-}
 		
 		////////////////////////////
 		//			Skybox		  //
@@ -397,7 +355,7 @@ rotateObject4(mesh4, -90,0,0);
     }
 	
 	
-	   function drawShapes() {
+	    function drawShapes() {
 
         var manager = new THREE.LoadingManager();
         manager.onProgress = function ( item, loaded, total ) {
@@ -410,10 +368,10 @@ rotateObject4(mesh4, -90,0,0);
 		
 		
 		 	particleSystem = new THREE.GPUParticleSystem( {
-				maxParticles: 7500
+				maxParticles: 2500
 			} );
 
-			//scene.add( particleSystem );
+		// scene.add( particleSystem );
 
 			// options passed during each spawned
 
@@ -431,7 +389,7 @@ rotateObject4(mesh4, -90,0,0);
 			};
 
 			spawnerOptions = {
-				spawnRate: 7500,
+				spawnRate: 2500,
 				horizontalSpeed: 1.5,
 				verticalSpeed: 1.33,
 				timeScale: 1
@@ -442,12 +400,12 @@ rotateObject4(mesh4, -90,0,0);
 			gui.add( options, "velocityRandomness", 0, 3 );
 			gui.add( options, "positionRandomness", 0, 3 );
 			gui.add( options, "size", 1, 20 );
-			gui.add( options, "sizeRandomness", 0, 25 );
+			gui.add( options, "sizeRandomness", 0, 17 );
 			gui.add( options, "colorRandomness", 0, 1 );
 			gui.add( options, "lifetime", .1, 10 );
 			gui.add( options, "turbulence", 0, 1 );
 
-			gui.add( spawnerOptions, "spawnRate", 10, 7500 );
+			gui.add( spawnerOptions, "spawnRate", 10, 2500 );
 			gui.add( spawnerOptions, "timeScale", -1, 1 );
 
 			//
@@ -499,11 +457,7 @@ rotateObject4(mesh4, -90,0,0);
 		
 		}
 
-		function render() {
-
-			renderer.render( scene, camera );
-
-		}
+		 
 		 
  
 	//////////////////////////////////////////////////////////////////////////////////
@@ -516,15 +470,15 @@ rotateObject4(mesh4, -90,0,0);
 	onRenderFcts.push(function(){
 		renderer.render( scene, camera );
 		
-		mesh.rotation.y = mesh.rotation.y - 0.01;
+		mesh.rotation.y = mesh.rotation.y - 0.001;
 		mesh2.rotation.y = mesh.rotation.y - 0.01;
-		mesh3.rotation.y = mesh.rotation.y - 0.01
-		mesh4.rotation.y = mesh.rotation.y - 0.01;
-			particleSystem.update( tick );
-
-			render();
+		 
+		
+			//particleSystem.update( tick );
+camera.rotation.y = 90;
+			//render();
 			stats.update();
-animate();
+//animate();
 		 
 	})
 
