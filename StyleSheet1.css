@@ -30,9 +30,9 @@
 .support{
     position:relative;
     color: cadetblue;
-	  padding: 70px;
+	  padding: 0px;
      font-size: 2.0em;
      text-align:center;
-      
+      bottom:20%;
 
 }
