@@ -21,8 +21,8 @@
     margin: 0;
     padding: 0;
     text-align: center;
-	 left: 20%;
-	 width: 40% ;
+	 
+	 width: 50% ;
 	 top:20%;
 	
 }
@@ -30,11 +30,11 @@
 .support{
     position:absolute;
     color: cadetblue;
-     font-size: 3.0em;
+     font-size: 2.0em;
      padding-left:0px;
    
   text-align:center;
-    left:20%;
+     
   top:70%;
 
 }
