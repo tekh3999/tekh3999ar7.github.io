@@ -1,2 +1,39 @@
-﻿body {
+﻿  body 
+{
+       margin: 0; 
+ padding: 0; 
+ text-align: center; 
+ background-color : white; 
+}
+
+.page
+{
+    
+    margin: 5px auto;
+ padding: 0; 
+ width:894px; 
+ height: 780px;
+ 
+  }
+
+.logo {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	width: 80%;
+	 top:20%;
+	
+}
+
+.support{
+    position:absolute;
+    color: cadetblue;
+     font-size: 3.0em;
+     padding-left:0px;
+   
+  text-align:center;
+  left: 38%;
+  top:70%;
+
 }

@@ -1,0 +1,6 @@
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\bin\Fi-Construction 2018.dll.config
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\bin\Fi-Construction 2018.dll
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\bin\Fi-Construction 2018.pdb
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\obj\Release\Fi-Construction 2018.dll
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\obj\Release\Fi-Construction 2018.pdb
+G:\my files\Programing Stuff\VS Programs\VS 2013\Fi-Construction 2018\Fi-Construction 2018\obj\Release\Fi-Construction 2018.csprojResolveAssemblyReference.cache
