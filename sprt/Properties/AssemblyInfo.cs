@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fi_Construction_2018")]
+[assembly: AssemblyTitle("ParticleSystem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fi_Construction_2018")]
+[assembly: AssemblyProduct("ParticleSystem")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ed2d346a-84d0-4385-9719-2d87b2539656")]
+[assembly: Guid("63fd8d3c-6ae8-4d74-81d8-7b1f83d1a460")]
 
 // Version information for an assembly consists of the following four values:
 //
