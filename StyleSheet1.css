@@ -1,4 +1,9 @@
-﻿  body 
+﻿  @viewport {
+        width: device-width;
+        
+    }   
+  
+  body 
 {
        margin: 0; 
  padding: 0; 
