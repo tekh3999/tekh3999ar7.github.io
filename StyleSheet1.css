@@ -36,3 +36,15 @@
       bottom:20%;
 
 }
+
+.btn{
+	
+	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: 1.0em;
+     text-align:center;
+      top:50%;
+	  left:-30%;
+	
+}
