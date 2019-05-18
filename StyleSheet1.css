@@ -14,10 +14,10 @@
 .page
 {
     
-    margin: 5px auto;
+   margin: 5px auto;
  padding: 0; 
- width:480px; 
- height: 780px;
+ width:400px; 
+ height: 750px;
  
   }
 
@@ -28,7 +28,7 @@
     text-align: center;
 	  
 	 width: 50% ;
-	 top:40%;
+	 
 	
 }
 
@@ -36,9 +36,10 @@
     position:relative;
     color: cadetblue;
 	  padding: 0px;
-     font-size: 2.0em;
+     font-size: 1.5em;
      text-align:center;
-      bottom:20%;
+	 
+      top:20%;
 
 }
 
@@ -47,9 +48,9 @@
 	position:relative;
     color: cadetblue;
 	  padding: 0px;
-     font-size: 1.0em;
+     font-size: .70em;
      text-align:center;
-      top:50%;
-	  left:-30%;
+      top:10%;
+	  left:-35%;
 	
 }
