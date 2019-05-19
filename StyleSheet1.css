@@ -52,5 +52,15 @@
      text-align:center;
       top:10%;
 	  left:-35%;
+	}
 	
-}
+	.hmbtn2{
+	
+	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:10%;
+	  left:-20%;
+	}
