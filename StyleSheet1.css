@@ -26,8 +26,8 @@
     margin: 0px;
     padding: 0px;
     text-align: center;
-	  
-	 width: 50% ;
+	  top: 30%;
+	 width: 85% ;
 	 
 	
 }
@@ -50,8 +50,8 @@
 	  padding: 0px;
      font-size: .70em;
      text-align:center;
-      top:10%;
-	  left:-50%;
+      top:40%;
+	  left: -13%;
 	}
 	
 	.hmbtn2{
@@ -61,6 +61,6 @@
 	  padding: 0px;
      font-size: .70em;
      text-align:center;
-      top:10%;
-	  left:-38%;
+      top:40%;
+	  left: 14%;
 	}
