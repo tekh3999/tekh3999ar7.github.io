@@ -62,5 +62,17 @@
      font-size: .70em;
      text-align:center;
       top:20%;
-	  left: 14%;
+	  left: 0%;
 	}
+	
+	.hmbtn3{
+	
+	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:20%;
+	  left: 12%;
+	}
+	
