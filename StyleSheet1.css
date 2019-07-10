@@ -76,3 +76,14 @@
 	  left: 12%;
 	}
 	
+	.hmbtn4{
+	
+	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:30%;
+	  left: -30%;
+	}
+	
