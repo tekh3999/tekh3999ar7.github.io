@@ -90,7 +90,7 @@
 	.hmbtn5{
 	
 	position:relative;
-      background: url("images/gplay.png") no-repeat;
+      background: url("Images/gplay.png") no-repeat;
     height: 29px;
  width:100px;
     bottom:-90%;
@@ -100,7 +100,7 @@
 	.hmbtn6{
 	
 	position:relative;
-      background: url("images/ingr_a.png") no-repeat;
+      background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
  width:33px;
     bottom:-90%;
