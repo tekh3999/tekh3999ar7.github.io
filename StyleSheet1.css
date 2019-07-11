@@ -93,8 +93,8 @@
       background: url("Images/gplay.png") no-repeat;
     height: 29px;
  width:100px;
-    bottom:-85%;
-	  left: -10%;
+    bottom:-45%;
+	  left: -30%;
 	}
 	
 	.hmbtn6{
@@ -103,8 +103,8 @@
       background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
  width:33px;
-    bottom:-85%;
-	  left: 0%;
+    bottom:-45%;
+	  left: -20%;
 	}
 	
 	
@@ -115,7 +115,7 @@
      font-size: 1.0em;
      text-align:center;
 	 
-      top:33%;
+      top:30%;
 	 }
 	
 	.logo2 {
@@ -126,8 +126,8 @@
 	
 	 height: 200px;
  width:200px;
-	     top:38%;
-		 left:0%;
+	     top:28%;
+		 left:18%;
 	}
 	
 	
