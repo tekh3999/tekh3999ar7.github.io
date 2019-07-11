@@ -117,8 +117,18 @@
  width:200px;
 	     top:50%;
 		 left:20%;
-	  
-	 
+	}
 	
-}
+	
+	 .h1{
+		 position:relative;
+		 color: cadetblue;
+	  padding: 0px;
+     font-size: 1.0em;
+     text-align:center;
+	 
+      top:50%;
+	 }
+	
+
 	
