@@ -107,6 +107,17 @@
 	  left: -20%;
 	}
 	
+	
+	 .h1{
+		 position:relative;
+		 color: cadetblue;
+	  padding: 0px;
+     font-size: 1.0em;
+     text-align:center;
+	 
+      top:33%;
+	 }
+	
 	.logo2 {
     position: relative;
     margin: 0px;
@@ -120,15 +131,6 @@
 	}
 	
 	
-	 .h1{
-		 position:relative;
-		 color: cadetblue;
-	  padding: 0px;
-     font-size: 1.0em;
-     text-align:center;
-	 
-      top:35%;
-	 }
 	
 
 	
