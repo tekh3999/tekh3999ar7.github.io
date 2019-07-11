@@ -94,7 +94,7 @@
     height: 29px;
  width:100px;
     bottom:-90%;
-	  left: -10%;
+	  left: -30%;
 	}
 	
 	.hmbtn6{
@@ -104,6 +104,21 @@
     height: 30px;
  width:33px;
     bottom:-90%;
-	  left: 0%;
+	  left: -20%;
 	}
+	
+	.logo2 {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+	
+	 height: 200px;
+ width:200px;
+	     top:50%;
+		 left:20%;
+	  
+	 
+	
+}
 	
