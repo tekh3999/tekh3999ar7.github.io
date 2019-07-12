@@ -52,7 +52,7 @@
      font-size: .70em;
      text-align:center;
       top:20%;
-	  left: -10%;
+	  left: -5%;
 	}
 	
 	.hmbtn2{
@@ -63,7 +63,7 @@
      font-size: .70em;
      text-align:center;
       top:20%;
-	  left: 10%;
+	  left: 0%;
 	}
 	
 	.hmbtn3{
@@ -74,7 +74,7 @@
      font-size: .70em;
      text-align:center;
       top:20%;
-	  left: 28%;
+	  left: 5%;
 	}
 	
 	.hmbtn4{
@@ -84,8 +84,8 @@
 	  padding: 0px;
      font-size: .70em;
      text-align:center;
-      top:30%;
-	  left: -28%;
+      top:20%;
+	  left: 10%;
 	}
 	
 	.hmbtn5{
@@ -116,7 +116,7 @@
      font-size: 1.0em;
      text-align:center;
 	 
-      top:35%;
+      top:25%;
 	 }
 	
 	.logo2 {
@@ -127,7 +127,7 @@
 	
 	 height: 150px;
  width:150px;
-	     top:30%;
+	     top:25%;
 		 left:18%;
 	}
 	
