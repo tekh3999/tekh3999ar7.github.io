@@ -94,8 +94,8 @@
       background: url("Images/gplay.png") no-repeat;
     height: 29px;
  width:100px;
-    bottom:-100%;
-	  left: -30%;
+    top:60%;
+	  left: -10%;
 	}
 	
 	.hmbtn6{
@@ -104,8 +104,8 @@
       background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
  width:33px;
-    bottom:-100%;
-	  left: -20%;
+    top:60%;
+	  left: 10%;
 	}
 	
 	
@@ -128,7 +128,7 @@
 	 height: 150px;
  width:150px;
 	     top:25%;
-		 left:18%;
+		 left:0%;
 	}
 	
 	
