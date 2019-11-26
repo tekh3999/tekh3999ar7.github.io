@@ -95,8 +95,8 @@
       background: url("Images/gplay.png") no-repeat;
     height: 29px;
  width:100px;
-    top:40%;
-	  left: -10%;
+    top:30%;
+	  left: -40%;
 	}
 	
 	.hmbtn6{
@@ -104,11 +104,19 @@
 	position:relative;
       background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
- width:33px;
-    top:40%;
-	  left: 10%;
+ width:30px;
+    top:20%;
+	  left: 30%;
 	}
-	
+		 .paypal{
+		 position:relative;
+		 
+	  padding: 0px;
+ 
+     text-align:center;
+	 left: 180%;
+      top:0%;
+	 }
 	
 	 .h1{
 		 position:relative;
@@ -120,6 +128,7 @@
       top:0%;
 	 }
 	
+
 	.logo2 {
     position: relative;
     margin: 0px;
