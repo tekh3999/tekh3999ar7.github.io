@@ -64,7 +64,7 @@
      font-size: .70em;
      text-align:center;
       top:0%;
-	  left: 0%;
+	  left: 10%;
 	}
 	
 	.hmbtn3{
@@ -75,7 +75,7 @@
      font-size: .70em;
      text-align:center;
       top:0%;
-	  left: 5%;
+	  left: 25%;
 	}
 	
 	.hmbtn4{
@@ -86,8 +86,51 @@
      font-size: .70em;
      text-align:center;
       top:0%;
-	  left: 10%;
+	  left: 38%;
 	}
+	
+	.dh_1pic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: -10%;
+	  width:20%;
+	  height:20%;
+		
+	}
+	
+	.wat_1pic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 5%;
+	  width:100%;
+	  height:100%;
+	}
+	
+	.d_watsonpic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 10%;
+	  width:20%;
+	  height:20%;
+	}
+	
+	
+	.pooh_1pic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 20%;
+	 width:20%;
+	  height:20%;
+	}
+	
 	
 	.hmbtn5{
 	
@@ -96,7 +139,7 @@
     height: 29px;
  width:100px;
     top:30%;
-	  left: -40%;
+	  left: -78%;
 	}
 	
 	.hmbtn6{
@@ -105,27 +148,24 @@
       background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
  width:30px;
-    top:20%;
-	  left: 30%;
+    top:18%;
+	  left: 50%;
 	}
 		 .paypal{
 		 position:relative;
-		 
-	  padding: 0px;
- 
-     text-align:center;
-	 left: 180%;
-      top:0%;
+		 padding: 0px;
+		text-align:center;
+		left:190%;
+		top:0%;
 	 }
 	
 	 .h1{
-		 position:relative;
-		 color: cadetblue;
+	 position:relative;
+	color: cadetblue;
 	  padding: 0px;
      font-size: 1.0em;
      text-align:center;
-	 
-      top:0%;
+	 top:0%;
 	 }
 	
 
