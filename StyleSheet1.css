@@ -155,6 +155,7 @@
 		left:-50%;
 		top:20%;
 		width: 200%;
+		height:4%;
 	 }
 	
 	.hmbtn5{
@@ -164,7 +165,7 @@
       background: url("Images/gplay.png") no-repeat;
     height: 29px;
  width:100px;
-    top:0%;
+    top:10%;
 	  left: -30%;
 	}
 	
@@ -175,25 +176,20 @@
     height: 29px;
  width:100px;
     top:0%;
-	  left: 280%;
+	  left: 230px;
 	}
 		
 	
 	
 
-		
-	 
- 
-	 
-	 
-	.hmbtn6{
+.hmbtn6{
 	
 	position:relative;
       background: url("Images/ingr_a.png") no-repeat;
     height: 30px;
  width:30px;
-    top:0%;
-	  left: 20%;
+    top:-45px;
+	  left: 210px;
 	}
 	
  
