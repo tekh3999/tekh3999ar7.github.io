@@ -1,4 +1,4 @@
-﻿   @viewport {
+﻿  @viewport {
         width: device-width;
 		height: devie-height;
         
@@ -48,6 +48,15 @@
 	 padding:0;
 	 left: 0;
 	 top:0;
+	 
+	
+ }
+ 
+  .pics2{
+	 position: relative;
+	 padding:0;
+	 left: 0;
+	 top:5%;
 	 
 	
  }
@@ -101,6 +110,12 @@
 	 left: -20;
 	 top:5;
 	}
+	.btns2{
+		 position: relative;
+	 padding:0;
+	 left: -20;
+	 top:7%;
+	}
 	
 	
 	.btn{
@@ -150,7 +165,7 @@
 	 .paypal{
 		 position:relative;
 		 padding: 0px;
-		 background-color: black;
+		 background-color: blue;
 		text-align:center;
 		left:-50%;
 		top:20%;
