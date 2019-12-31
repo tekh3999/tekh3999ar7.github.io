@@ -129,6 +129,50 @@
 	  left: -23%;
 	}
 	
+	.btn5{
+	
+	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+      
+      top:-2%;
+	  left: -23%;
+	}
+	
+	
+	.btn6{ 
+	  position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:-2%;
+	  left: -6%;
+	}
+	
+	
+	.btn7{
+	 	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:-2%;
+	  left: 9%;
+	}
+	
+	.btn8{
+		 	position:relative;
+    color: cadetblue;
+	  padding: 0px;
+     font-size: .70em;
+     text-align:center;
+      top:-2%;
+	  left: 23%;ter;
+      top:-2%;
+	}
+	
 	.hmbtn2{
 	
 	position:relative;
