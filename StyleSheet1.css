@@ -104,6 +104,29 @@
 	  height:7%;
 	}
 	
+	.HPNYpic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: -15%;
+	  width:25%;
+	  height:7%;
+		
+	}
+	 
+	
+	
+	.pooh_1pic{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 16%;
+	 width:20%;
+	  height:7%;
+	}
+	
 	.btns1{
 		 position: relative;
 	 padding:0;
