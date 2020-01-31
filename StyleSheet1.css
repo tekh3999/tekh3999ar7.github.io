@@ -114,7 +114,25 @@
 	  height:7%;
 		
 	}
-	 
+	.hiphop{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 5%;
+	  width:20%;
+	  height:5%;
+	}
+	
+	 .bird{
+		position:relative;
+		padding: 0px;
+     text-align:center;
+      top:0%;
+	  left: 5%;
+	  width:20%;
+	  height:5%;
+	}
 	
 	
 	.pooh_1pic{
